@@ -2,40 +2,134 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f3f4f6; /* Couleur claire */
     text-align: center;
-    background-color: #f9f9f9;
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #449970;
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
+    font-size: 24px;
 }
 
 main {
-    margin: 20px;
+    margin: 40px auto;
+    max-width: 900px; /* Pour centrer le contenu */
+    padding: 20px;
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #449970;
     color: white;
     border: none;
-    padding: 10px 20px;
-    margin: 10px;
+    padding: 12px 24px;
+    margin: 20px auto;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 25px;
+    font-size: 18px;
+    display: block; /* Centré */
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #449970;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+.wishlist {
+    display: flex;
+    flex-wrap: wrap; /* Adaptable pour écrans plus petits */
+    justify-content: center; /* Centré horizontalement */
+    gap: 30px; /* Espace entre les items */
+    padding: 20px;
 }
 
-li {
+.item {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 200px; /* Augmenté pour plus de visibilité */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item:hover {
+    transform: translateY(-10px); /* Léger soulèvement au survol */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.item img {
+    width: 100%;
+    height: 200px; /* Taille uniforme */
+    object-fit: cover; /* Adapte l'image sans la déformer */
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.item p {
     margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+.featured-item {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    margin: 40px auto;
+    padding: 30px; /* Plus d'espacement */
+    max-width: 1200px; /* Plus large */
+    gap: 30px; /* Plus d'espace entre l'image et le texte */
+}
+
+.featured-item img {
+    width: 400px; /* Image plus large */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour mettre en avant */
+}
+
+.featured-item .description {
+    text-align: left;
+    font-size: 18px; /* Texte plus grand */
+    color: #333;
+    line-height: 1.5; /* Améliore la lisibilité */
+}
+
+.featured-item .description h2 {
+    font-size: 32px; /* Titre plus grand */
+    margin-bottom: 15px;
+    color: #449970; /* Couleur verte harmonisée */
+    font-weight: bold;
+}
+
+.featured-item .description p {
+    font-size: 20px; /* Augmente la taille du prix */
+}
+@media screen and (max-width: 768px) {
+    .featured-item {
+        flex-direction: column; /* Empile l'image et la description */
+        text-align: center; /* Centre le contenu pour les petits écrans */
+        padding: 20px; /* Réduit le padding pour économiser de l'espace */
+    }
+
+    .featured-item img {
+        width: 100%; /* L'image occupe toute la largeur */
+        max-width: 300px; /* Limite la taille maximale */
+        margin-bottom: 20px; /* Ajoute de l'espace entre l'image et le texte */
+    }
+
+    .featured-item .description {
+        font-size: 16px; /* Réduit légèrement la taille du texte */
+    }
+
+    .featured-item .description h2 {
+        font-size: 24px; /* Réduit la taille du titre */
+    }
+
+    .featured-item .description p {
+        font-size: 18px; /* Réduit la taille des paragraphes */
+    }
 }

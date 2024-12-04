@@ -8,16 +8,43 @@
 </head>
 <body>
     <header>
-        <h1>Ma Liste de Noël - Famille</h1>
+        <h1>Ma Liste de Noël</h1>
     </header>
     <main>
-        <p>Merci de contribuer à mon Noël ! Si possible, une petite participation financière serait idéale. Sinon, voici ma liste :</p>
-        <ul>
-            <li><a href="https://www.amazon.fr/hz/wishlist/ls/3TQYNJ8JI7OT2?ref_=wl_share">🎁Ma liste amazon</a></li>
-            <li><a href="https://www.myboardgamecollection.net/p/El_coabite">🤹‍♂️ Ma liste de jeux de societe</a></li>
-            <li>🎧 Casque DEF - <a href="https://darq.design/products/fingers-hoodie?variant=46043668021523">Lien</a></li>
-        </ul>
-        <button onclick="location.href='index.html'">Retour</button>
+        <p>Merci de contribuer à mon Noël ! J’ai déjà craqué et acheté cette imprimante 3D incroyable 🎁, mais j’aimerais que ce soit notre cadeau collectif. Une petite participation de chacun ferait de ce projet un souvenir partagé ! 💖 Voici ce que j’ai choisi :</p>
+        <div class="featured-item">
+            <img src="https://www.ecoprint-3d.be/wp-content/uploads/2023/01/A1_combo.webp" alt="Bambu Lab A1">
+            <div class="description">
+                <h2>🖨️ Bambu Lab A1</h2>
+                <p>Une imprimante 3D moderne et performante.</p>
+                <p><strong>Prix: </strong> 500€</p>
+            </div>
+        </div>
+        <p>Sinon, voici ma liste de souhaits :</p>
+        <div class="wishlist">
+            <!-- Liste de jeux de société -->
+            <div class="item">
+                <a href="https://www.myboardgamecollection.net/p/El_coabite/miflGGwM0imByI8BmNgjw?sortBy=1" target="_blank">
+                    <img src="https://www.campinglereve.com/wp-content/uploads/2024/03/actu-jeux-de-societe.jpg" alt="Liste Jeux de Société">
+                </a>
+                <p>🤹‍♂️ Ma liste de jeux de société</p>
+            </div>
+            <!-- Liste Amazon -->
+            <div class="item">
+                <a href="https://www.amazon.fr/hz/wishlist/ls/3TQYNJ8JI7OT2?ref_=wl_share" target="_blank">
+                    <img src="data:image/png;base64,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" alt="Liste Amazon">
+                </a>
+                <p>🎁 Ma liste Amazon</p>
+            </div>
+            <!-- Hoodie -->
+            <div class="item">
+                <a href="https://darq.design/products/fingers-hoodie?variant=46043668021523" target="_blank">
+                    <img src="https://darq.design/cdn/shop/files/sukunafront.png?v=1690479508&width=600" alt="Hoodie">
+                </a>
+                <p>👕 Hoodie: taille L</p>
+            </div>
+        </div>
+        <!--<button onclick="location.href='index.html'">Retour</button>-->
     </main>
 </body>
 </html>
